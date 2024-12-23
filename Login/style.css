@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+html ,body{
+    height: 100%;
+}
+body{
+    background-color: #fff;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+     padding: 1rem;
+     font-size: 1.5rem;
+     font-weight: bold;
+
+}
+ h1{
+
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2b6777;
+    margin-bottom: 2rem;
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+    position: absolute;
+    top: 20%;
+    left: 47%;
+
+    
+}
+.container form{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+}
+.container form .form-group{
+    margin-bottom: 1rem;
+}
+.container form .form-group label{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.container form .form-group input{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid #5CB338;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.container form .form-group input:focus{
+    outline: none;
+    border: 1px solid #5CB338;
+}
+.container form .form-group button{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #5CB338;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.container form .form-group button:hover{
+    background-color: #2b6777;
+
+}
+.container form p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    
+}
+.container form p a{
+    color: #2b6777;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.container form p a:hover{
+    color: #5CB338;
+}
+

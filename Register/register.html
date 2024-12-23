@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -13,11 +15,15 @@
         </header>
         <main>
             <div class="options">
-                <a href="register-patient.html" class="btn">Register as Patient</a>
-                <a href="register-doctor.html" class="btn">Register as Doctor</a>
+                <form action="/register">
+                    <button><a href="../register-patient.html" class="btn">Register as Patient</a></button>
+                    <button><a href="../register-doctor.html" class="btn">Register as Doctor</a></button>
+                    <p>Already have an account? <a href="../Login/login.html">Login here</a></p>
+                </form>
             </div>
         </main>
     </div>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

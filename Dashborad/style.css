@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+html ,body{
+    height: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2b6777;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+}
+.navbar .logo{
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+.navbar .logo::first-letter{
+    font-size: 4rem;
+    color: #5CB338;
+}
+.navbar .navbar-search ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 1.8rem;
+}
+.navbar .navbar-search ul li{
+    position: relative;
+    cursor: pointer;
+
+    
+}
+.navbar .navbar-search ul li a {
+    color: #2b6777;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+}
+.navbar .navbar-search ul li a:hover{
+    color: #5CB338;
+
+
+}
+
+.navbar .navbar-search ul li:hover::after{
+    width: 100%;
+}
+
+.advertisement{
+    background-color: #5CB338;
+     color: white;
+     padding: 1rem;
+     font-size: 2rem;
+     text-align: center;
+}
+.prescription{
+    background-color: #2b6777;
+     color: white;
+     padding: 1rem;
+     font-size: 2.1rem;
+     text-align: center;
+}
+
+.advertisement span , .prescription span , .prescription .today-prescription{
+    font-weight: bold;
+
+}
+main{
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2b6777;
+    line-height: 2;
+    font-weight: 500;
+    
+
+}
+main h1{
+    font-size: 3rem;
+     font-weight: 700;
+     margin-bottom: 2rem;
+     color: #5CB338;
+
+}
+main p a{
+    font-size: 1.6rem;
+     font-weight: 500;
+     margin-bottom: 2rem;
+      color: #2b6777;
+      line-height: 2;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+}
+main p a:hover{
+    color: #5CB338;
+
+}
+main a{
+    font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        color: #2b6777;
+        line-height: 2;
+        text-decoration: none;
+        transition: all 0.3s ease;
+}
+main  a:hover {
+    color: #5CB338;
+
+}
+
+
+

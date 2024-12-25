@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2b6777;
+  margin-bottom: 2rem;
+  text-align: center;
+  align-items: center;
+  font-weight: 600;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+.container form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+    width: 30%;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #2c3e50;
+  font-weight: bold;
+}
+.register{
+    background-color: #3498db;
+    border: 0.1rem solid #3498db;
+    transition: 0.2s ease all;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.register:hover{
+    background-color: #fff;
+    border: 0.1rem solid #3498db;
+    color: #3498db;
+}
+input,
+select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border: 0.1rem solid #bdc3c7;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.login-here{
+    margin-top: 1rem;
+   font-size: 1.4rem;
+   color: #2c3e50;
+
+}
+.login-here a{
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-here a:hover{
+    color: #5CB338;
+}

@@ -6,7 +6,7 @@
     <title>Register as Doctor</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="register-doctor-page">
+<body>
     <div class="container">
         <h1>Doctor Registration</h1>
         <form id="doctor-registration-form">
@@ -26,10 +26,8 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Enter a password" required>
             </div>
-            <div class="form-group">
-                <button type="submit">Register</button>
-            </div>
-            <p>Already have an account? <a href="login.html">Login here</a></p>
+            <button class="register">Register</button>
+            <p class="login-here">Already have an account? <a href="../Login/login.html">Login here</a></p>
         </form>
     </div>
     <script src="register-doctor.js" defer></script>

@@ -71,7 +71,7 @@ h1 {
     color: #fff;
 }
 .options form button a {
-    color: #000;
+    color: #2c3e50;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -86,7 +86,8 @@ h1 {
 .options form p {
     font-size: 1.4rem;
     font-weight: 500;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 3rem;
 
 }
 
@@ -94,6 +95,7 @@ h1 {
     color: #2b6777;
     text-decoration: none;
     transition: all 0.3s ease;
+    /* font-size: 1.3rem; */
 }
 
 .options form p a:hover {

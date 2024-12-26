@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Find Doctor</title>
+    <link rel="stylesheet" href="../Dashborad/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Doctors</h1>
+
+<body class="find-doctor-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>HealthCare</h1>
+            </div>
+            <div class="navbar-search">
+                <ul>
+                    <li><a href="../Dashborad/dashboard.html">Home</a></li>
+                    <li><a href="./about">About</a></li>
+                    <li><a href="../Services/service.html">Service</a></li>
+                    <li><a href="./findDoctor.html" class="active">Find Doctor</a></li>
+                    <li><a href="./contactus">Contact Us</a></li>
+                    <li><a href="../Login/login.html">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="search-section">
+            <h1>Find Your Doctor</h1>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search by name or specialization">
+                <button id="search-btn">Search</button>
+            </div>
+        </section>
+        <section class="doctor-list">
+            <!-- Doctor Cards Will Be Here -->
+        </section>
+    </main>
+   
+    <script src="../js/scripts.js"></script>
 </body>
+
 </html>

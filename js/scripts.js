@@ -56,3 +56,75 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const doctorList = [
+        { id: 1, name: "Dr. Sarah Moh", specialization: "Cardiologist", image: "../images/doctor-2.png", bio: "Expert in heart diseases." },
+        { id: 2, name: "Dr. Shams WH", specialization: "Dermatologist", image: "../images/doctor-4.png", bio: "Specialist in skin treatments." },
+        { id: 3, name: "Dr. faten MO", specialization: "Pediatrician", image: "../images/doctor-5.png", bio: "Child health expert." },
+        { id: 4, name: "Dr. Amera SH", specialization: "Neurologist", image: "../images/doctor-6.png", bio: "Specialist in brain and nerves." },
+        { id: 1, name: "Dr. John Doe", specialization: "dentist", image: "../images/doctor-1.png", bio: "Expert in heart diseases." },
+        { id: 2, name: "Dr. Jane Smith", specialization: "Obstetrician", image: "../images/doctor-7.png", bio: "Specialist in skin treatments." },
+        { id: 3, name: "Dr. Emily White", specialization: "Orthopedist", image: "../images/doctor-8.png", bio: "Child health expert." },
+        { id: 4, name: "Dr. Robert Brown", specialization: "Surgeon", image: "../images/doctor-3.png", bio: "Specialist in brain and nerves." },
+    ];
+
+    const searchInput = document.getElementById("search");
+    const searchButton = document.getElementById("search-btn");
+    const doctorListContainer = document.querySelector(".doctor-list");
+    const modal = document.getElementById("doctor-profile-modal");
+    const closeModal = document.getElementById("close-modal");
+
+
+    // عرض الأطباء
+    function displayDoctors(doctors) {
+        doctorListContainer.innerHTML = ""; // تفريغ القائمة القديمة
+        if (doctors.length === 0) {
+            doctorListContainer.innerHTML = `<p>No doctors found.</p>`;
+            return;
+        }
+        doctors.forEach((doctor) => {
+            const doctorCard = document.createElement("div");
+            doctorCard.classList.add("doctor-card");
+            doctorCard.innerHTML = `
+                <img src="${doctor.image}" alt="${doctor.name}">
+                <h2>${doctor.name}</h2>
+                <p>${doctor.specialization}</p>
+                <button>Book Appointment</button>
+            `;
+            doctorListContainer.appendChild(doctorCard);
+        });
+    }
+
+    // البحث عن الأطباء
+    searchButton.addEventListener("click", () => {
+        const query = searchInput.value.toLowerCase();
+        const filteredDoctors = doctorList.filter(
+            (doctor) =>
+                doctor.name.toLowerCase().includes(query) ||
+                doctor.specialization.toLowerCase().includes(query)
+        );
+
+        displayDoctors(filteredDoctors);
+
+        if (filteredDoctors.length === 1) {
+            const doctorCard = document.querySelector(".doctor-card");
+            if (doctorCard) {
+                doctorCard.classList.add("highlight");
+                
+                doctorListContainer.style.display = "flex";
+                doctorListContainer.style.justifyContent = "center";
+            }
+        } else {
+            doctorListContainer.style.display = "grid";
+            doctorListContainer.style.gridTemplateColumns = "repeat(auto-fit, minmax(300px, 1fr))";
+            doctorListContainer.style.justifyContent = "start";
+        }
+
+        if (filteredDoctors.length === 0) {
+            alert("No doctor found with that name. Please try again.");
+        }
+    });
+
+    // عرض جميع الأطباء عند تحميل الصفحة
+    displayDoctors(doctorList);
+});

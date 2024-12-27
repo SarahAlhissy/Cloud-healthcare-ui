@@ -1,0 +1,68 @@
+
+/* Doctor Profile Styles */
+.profile-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-container h1 {
+    font-size: 3rem;
+    color: #2b6777;
+    margin-bottom: 1rem;
+}
+
+.profile-container p {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.profile-container h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: #5CB338;
+}
+
+#appointment-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#appointment-list li {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border: 0.1rem solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+#book-appointment-btn {
+    padding: 1rem 2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#book-appointment-btn:hover {
+    background-color: white;
+    color: #3498db;
+    border: 0.1rem solid #3498db;
+}

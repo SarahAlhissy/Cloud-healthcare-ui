@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${doctor.image}" alt="${doctor.name}">
                 <h2>${doctor.name}</h2>
                 <p>${doctor.specialization}</p>
-                <button>Book Appointment</button>
+                <button onclick="openProfile(${doctor.id})">Book Appointment</button>
             `;
             doctorListContainer.appendChild(doctorCard);
         });
@@ -125,6 +125,66 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // عرض جميع الأطباء عند تحميل الصفحة
+    window.openProfile = (doctorId) => {
+        const doctor = doctorList.find((doc) => doc.id === doctorId);
+        if (doctor) {
+            window.location.href = `../DoctorProfile/doctorProfile.html?id=${doctorId}`;
+        }
+    };
+
+    searchButton.addEventListener("click", () => {
+        const query = searchInput.value.toLowerCase();
+        const filteredDoctors = doctorList.filter(
+            (doctor) =>
+                doctor.name.toLowerCase().includes(query) ||
+                doctor.specialization.toLowerCase().includes(query)
+        );
+        displayDoctors(filteredDoctors);
+    });
     displayDoctors(doctorList);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const doctorId = urlParams.get("id");
+
+    const doctorList = [
+        { id: 1, name: "Dr. Sarah Moh", specialization: "Cardiologist", image: "../images/doctor-2.png", bio: "Expert in heart diseases." },
+        { id: 2, name: "Dr. Shams WH", specialization: "Dermatologist", image: "../images/doctor-4.png", bio: "Specialist in skin treatments." },
+        { id: 3, name: "Dr. faten MO", specialization: "Pediatrician", image: "../images/doctor-5.png", bio: "Child health expert." },
+        { id: 4, name: "Dr. Amera SH", specialization: "Neurologist", image: "../images/doctor-6.png", bio: "Specialist in brain and nerves." },
+        { id: 1, name: "Dr. John Doe", specialization: "dentist", image: "../images/doctor-1.png", bio: "Expert in heart diseases." },
+        { id: 2, name: "Dr. Jane Smith", specialization: "Obstetrician", image: "../images/doctor-7.png", bio: "Specialist in skin treatments." },
+        { id: 3, name: "Dr. Emily White", specialization: "Orthopedist", image: "../images/doctor-8.png", bio: "Child health expert." },
+        { id: 4, name: "Dr. Robert Brown", specialization: "Surgeon", image: "../images/doctor-3.png", bio: "Specialist in brain and nerves." },
+    ];
+
+    const doctor = doctorList.find((doc) => doc.id == doctorId);
+
+    if (doctor) {
+        document.getElementById("doctor-image").src = doctor.image;
+        document.getElementById("doctor-name").textContent = doctor.name;
+        document.getElementById("doctor-specialization").textContent = doctor.specialization;
+        document.getElementById("doctor-bio").textContent = doctor.bio;
+
+        const appointmentList = document.getElementById("appointment-list");
+        doctor.appointments.forEach((appointment) => {
+            const li = document.createElement("li");
+            li.textContent = appointment;
+            appointmentList.appendChild(li);
+        });
+
+        document.getElementById("book-appointment-btn").addEventListener("click", () => {
+            alert(`Appointment booked with ${doctor.name} at ${doctor.appointments[0]}`);
+        });
+    } else {
+        document.querySelector(".profile-container").innerHTML = `
+            <h1>Doctor Not Found</h1>
+            <button onclick="goBack()">Back</button>
+        `;
+    }
+ 
+});
+
+function goBack() {
+    window.history.back();
+}

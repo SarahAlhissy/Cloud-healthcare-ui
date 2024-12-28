@@ -8,13 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const password = document.getElementById("password").value;
             console.log("Login submitted with:", { email, password });
 
-            // Example: Redirect after successful login (adjust as needed)
             alert("Login successful!");
             window.location.href = "dashboard.html";
         });
     }
 
-    // JavaScript for Patient Registration Page
     const patientForm = document.querySelector("form[action='/register-patient']");
     if (patientForm) {
         patientForm.addEventListener("submit", function (event) {
@@ -28,13 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 password: patientPassword,
             });
 
-            // Example: Redirect after successful registration (adjust as needed)
             alert("Patient registration successful!");
             window.location.href = "login.html";
         });
     }
 
-    // JavaScript for Doctor Registration Page
     const doctorForm = document.querySelector("form[action='/register-doctor']");
     if (doctorForm) {
         doctorForm.addEventListener("submit", function (event) {
@@ -50,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 specialization: specialization,
             });
 
-            // Example: Redirect after successful registration (adjust as needed)
             alert("Doctor registration successful!");
             window.location.href = "login.html";
         });
@@ -75,9 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModal = document.getElementById("close-modal");
 
 
-    // عرض الأطباء
     function displayDoctors(doctors) {
-        doctorListContainer.innerHTML = ""; // تفريغ القائمة القديمة
+        doctorListContainer.innerHTML = "";
         if (doctors.length === 0) {
             doctorListContainer.innerHTML = `<p>No doctors found.</p>`;
             return;
@@ -95,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // البحث عن الأطباء
     searchButton.addEventListener("click", () => {
         const query = searchInput.value.toLowerCase();
         const filteredDoctors = doctorList.filter(

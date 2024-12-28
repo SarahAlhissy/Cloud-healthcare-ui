@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Location</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .location-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .location-section h2 {
+            font-size: 2.5rem;
+            color: #2b6777;
+            margin-bottom: 20px;
+        }
+
+        .location-info {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .location-details {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .location-details h3 {
+            font-size: 1.8rem;
+            color: #2b6777;
+            margin-bottom: 15px;
+        }
+
+        .location-details p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .location-map {
+            flex: 1;
+            text-align: center;
+        }
+
+        .location-map img {
+
+            width: 30rem;
+            height: 20rem;
+            border: 0;
+            border-radius: 15px;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .contact-info h4 {
+            font-size: 1.5rem;
+            color: #2b6777;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .location-info {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="location-section">
+        <h2>Our Location</h2>
+
+        <div class="location-info">
+            <div class="location-details">
+                <h3>Visit Us</h3>
+                <p>We are located at the heart of the city, easily accessible by public transport and with ample parking
+                    available. Our office is open Monday to Friday from 9 AM to 6 PM.</p>
+                <div class="contact-info">
+                    <h4>Contact Information</h4>
+                    <p><strong>Address:</strong> 123 Health Street, Cityville, Country</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> contact@healthcare.com</p>
+                </div>
+            </div>
+
+            <div class="location-map">
+                <img src="../images//map-location.jpg" />
+                   
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

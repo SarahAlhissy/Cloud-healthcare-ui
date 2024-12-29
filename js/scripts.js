@@ -188,3 +188,60 @@ document.addEventListener("DOMContentLoaded", () => {
 function goBack() {
     window.history.back();
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const doctorId = urlParams.get("id");
+
+    const doctorList = [
+        { id: 1, name: "Dr. Sarah Moh", specialization: "Cardiologist", image: "../images/doctor-2.png", bio: "Expert in heart diseases.", workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: [] },
+        { id: 2, name: "Dr. Shams WH", specialization: "Dermatologist", image: "../images/doctor-4.png", bio: "Specialist in skin treatments.", workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: [] },
+        { id: 3, name: "Dr. faten MO", specialization: "Pediatrician", image: "../images/doctor-5.png", bio: "Child health expert." , workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: []},
+        { id: 4, name: "Dr. Amera SH", specialization: "Neurologist", image: "../images/doctor-6.png", bio: "Specialist in brain and nerves." , workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: []},
+        { id: 1, name: "Dr. John Doe", specialization: "dentist", image: "../images/doctor-1.png", bio: "Expert in heart diseases." , workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: []},
+        { id: 2, name: "Dr. Jane Smith", specialization: "Obstetrician", image: "../images/doctor-7.png", bio: "Specialist in skin treatments.", workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: [] },
+        { id: 3, name: "Dr. Emily White", specialization: "Orthopedist", image: "../images/doctor-8.png", bio: "Child health expert." , workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: []},
+        { id: 4, name: "Dr. Robert Brown", specialization: "Surgeon", image: "../images/doctor-3.png", bio: "Specialist in brain and nerves.", workingHours: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"], appointments: [] },
+    
+    ];
+
+    const doctor = doctorList.find((doc) => doc.id == doctorId);
+
+    if (doctor) {
+        document.getElementById("doctor-image").src = doctor.image;
+        document.getElementById("doctor-name").textContent = doctor.name;
+        document.getElementById("doctor-specialization").textContent = doctor.specialization;
+        document.getElementById("doctor-bio").textContent = doctor.bio;
+
+        const appointmentList = document.getElementById("available-times");
+
+        doctor.workingHours.forEach((hour) => {
+            const button = document.createElement("button");
+            button.textContent = hour;
+            button.onclick = function () {
+                selectTime(hour);
+            };
+            appointmentList.appendChild(button);
+        });
+    }
+
+    // التعامل مع الحجز وتغيير الزر ليظهر رسالة
+    document.getElementById("confirm-booking-btn").style.display = "none"; // إخفاء زر الحجز
+
+});
+
+// اختيار الموعد وعرض رسالة "بانتظار موافقة الطبيب"
+function selectTime(time) {
+    // تخزين الساعة المختارة
+    localStorage.setItem("selectedTime", time);
+
+    // عرض رسالة تأكيد الحجز في انتظار الموافقة
+    const appointmentStatus = document.getElementById("appointment-status");
+    appointmentStatus.style.display = "block"; // إظهار الرسالة
+    appointmentStatus.textContent = `Your appointment at ${time} is pending approval from the doctor.`;
+
+    // إخفاء باقي الأزرار
+    const buttons = document.querySelectorAll("#available-times button");
+    buttons.forEach(button => {
+        button.disabled = true; // تعطيل باقي الأزرار بعد اختيار الموعد
+    });
+}

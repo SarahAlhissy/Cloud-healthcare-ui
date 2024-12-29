@@ -66,3 +66,28 @@
     color: #3498db;
     border: 0.1rem solid #3498db;
 }
+#available-times {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#available-times button {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #5CB338;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#appointment-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #5CB338;
+    color: #5CB338;
+    font-size: 1.4rem;
+    border-radius: 5px;
+}

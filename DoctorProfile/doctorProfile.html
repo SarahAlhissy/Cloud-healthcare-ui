@@ -20,9 +20,11 @@
                     <li><a href="../Dashborad/dashboard.html">Home</a></li>
                     <li><a href="./about">About</a></li>
                     <li><a href="../Services/service.html">Service</a></li>
-                    <li><a href="../FindDoctor/findDoctor.html" class="active">Find Doctor</a></li>
+                    <li><a href="../FindDoctor/findDoctor.html">Find Doctor</a></li>
                     <li><a href="./contactus">Contact Us</a></li>
+                    <li><a href="../MyBookings/MyBookings.html">My Bookings</a></li>
                     <li><a href="../Login/login.html">Log In</a></li>
+        
                 </ul>
             </div>
         </nav>
@@ -38,10 +40,16 @@
             <ul id="appointment-list">
                
             </ul>
-            <button id="book-appointment-btn">Book Appointment</button>
-        </div>
-    </main>
-
+            <h3>Choose a Time Slot:</h3>
+            <div id="available-times">
+                <!-- سيتم تحميل ساعات الطبيب هنا -->
+            </div>
+            
+            <div id="appointment-status" style="display: none; color: green;">
+                Your appointment is pending approval from the doctor.
+            </div>
+            
+    
     <script src="../js/scripts.js"></script>
 </body>
 

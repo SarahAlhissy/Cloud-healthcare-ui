@@ -10,6 +10,13 @@ html{
 html ,body{
     height: 100%;
 }
+body{
+    background-image: url("../images/medical.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -84,6 +91,7 @@ main{
     color: #2b6777;
     line-height: 2;
     font-weight: 500;
+    margin-top: 15rem;
     
 
 }

@@ -1,0 +1,101 @@
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      box-sizing: border-box;
+  }
+  html{
+    font-size: 62.5%;
+
+  }
+  html ,body{
+    height: 100%;
+  }
+
+  .appointment-section {
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #2b6777;
+      line-height: 2;
+      font-weight: 500;
+    
+
+  }
+
+  .appointment-section h2 {
+      font-size: 3.5rem;
+      color: #2b6777;
+      margin-bottom: 1.5rem;
+      text-align: center;
+  }
+
+  .appointment-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4); 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    
+  }
+
+  .appointment-form label {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 0.3rem;
+      display: block;
+  }
+
+  .appointment-form input,
+  .appointment-form select {
+      color: #414141;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1.5rem;
+  }
+
+  .appointment-form button {
+    width: 100%;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        border: 0.1rem solid #5CB338;
+        border-radius: 5px;
+        background-color: #5CB338;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+  }
+
+  .appointment-form button:hover {
+      background-color: #fff;
+      color: #5CB338;
+  }
+
+  .confirmation-message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: green;
+  }
+
+  .error-message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: red;
+  }
+
+  @media (max-width: 768px) {
+      .appointment-form {
+          padding: 20px;
+          width: 90%;
+      }
+  }

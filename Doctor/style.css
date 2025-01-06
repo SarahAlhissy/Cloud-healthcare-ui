@@ -13,6 +13,14 @@ html,
 body {
   height: 100%;
 }
+body{
+      background-image: url('../images//medical.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        text-align: center;
+}
 
 .container {
   display: flex;

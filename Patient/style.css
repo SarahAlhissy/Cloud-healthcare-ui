@@ -13,6 +13,14 @@ html,
 body {
     height: 100%;
 }
+body{
+        background-image: url('../images//medical.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            text-align: center;
+}
 
 .container {
     display: flex;
@@ -21,6 +29,8 @@ body {
     height: 100vh;
     padding: 1rem;
     font-size: 1.5rem;
+   
+    
     
 }
 
@@ -33,8 +43,9 @@ h1 {
     align-items: center;
     font-weight: 600;
     position: absolute;
-    top: 3%;
+    top: 5%;
     left: 40%;
+    margin-top: 0.5rem;
 }
 
 .container form {
@@ -42,6 +53,7 @@ h1 {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+    
     
     
 }

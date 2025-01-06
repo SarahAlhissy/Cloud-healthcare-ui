@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Location</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../Dashborad/style.css">
-    <style>
-      
-    </style>
 </head>
 
 <body>
@@ -38,27 +35,38 @@
             </div>
         </nav>
     </header>
-    <section class="location-section">
-        <h2>Our Location</h2>
+   
 
-        <div class="location-info">
-            <div class="location-details">
-                <h3>Visit Us</h3>
-                <p>Welcome to HealthCare Center, where exceptional care meets comfort and compassion. Our team is here to ensure your well-being, and we look forward to your visit.</p>
-                <div class="contact-info">
-                    <h4>Contact Information</h4>
-                    <p><strong>Address:</strong> 456 Healing Way, Wellness District,Care City</p>
-                    <p><strong>Phone:</strong> (555) 123-4567</p>
-                    <p><strong>Email:</strong> healthcare@gmail.com</p>
-                </div>
-            </div>
-
-            <div class="location-map">
-                <img src="../images//map-location.jpg" />
-                   
-            </div>
+ 
+    <div class="admin-content">
+        <div class="form-container" id="add-patient">
+            <h3>Add New Patient</h3>
+            <form id="addPatientForm">
+                <input type="text" id="patientName" placeholder="Patient Name" required>
+                <input type="text" id="patientUsername" placeholder="Username" required>
+                <input type="password" id="patientPassword" placeholder="Password" required>
+                <button type="submit">Add Patient</button>
+            </form>
+            <p id="errorMessage" style="color: red; display: none;">Patient already exists!</p>
         </div>
-    </section>
+
+        <div class="form-container" id="patient-list">
+            <h4>Registered Patients</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   <script src="main.js"></script>
 </body>
 
 </html>
